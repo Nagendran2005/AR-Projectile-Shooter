@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/AR_Projectile_Shooter.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
     path: Assets/Scenes/AR_Plane_Detection.unity
     guid: f5bd0977a82a6b341867567fdbdcca3d
+  - enabled: 1
+    path: Assets/Scenes/AR_Plane_Projectile_Shooter.unity
+    guid: 2f036e1c055600b47b10d1629ebf3cf9
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: b37874f9d0b45d4438f9b0545098a754, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 3aacdc996fef3c14dbda262b6b5d028e, type: 2}

@@ -83,7 +83,9 @@
           },
           {
             "name": "AudioClip",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/AR_Plane_Detection.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -103,13 +105,17 @@
           },
           {
             "name": "AudioResource",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Scenes/AR_Plane_Detection.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
             "name": "AudioSource",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/AR_Plane_Detection.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -962,13 +968,17 @@
         "dependencies": [
           {
             "name": "ParticleSystem",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/AR_Plane_Detection.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "ParticleSystemRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/AR_Plane_Detection.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           }
