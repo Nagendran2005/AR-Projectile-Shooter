@@ -6,8 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/AR_Projectile_Shooter.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: b37874f9d0b45d4438f9b0545098a754, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 3aacdc996fef3c14dbda262b6b5d028e, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: f1cda52aa30eefc4dbf0cec82d22f3ce, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 639da581f7daa994f8afb9674034de4c, type: 2}
   m_UseUCBPForAssetBundles: 0
