@@ -813,6 +813,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7037096154120666952}
   - component: {fileID: 4014679370358035694}
+  - component: {fileID: 4491971316979951402}
   m_Layer: 0
   m_Name: Chuck Final
   m_TagString: Untagged
@@ -853,6 +854,20 @@ MonoBehaviour:
   speed: 2
   rotate: 1
   rotationSpeed: 40
+--- !u!114 &4491971316979951402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5757082929888739153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15d08bc83b328e41a3b52791266187c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARTarget
+  maxHits: 3
+  explosionEffect: {fileID: 0}
 --- !u!1 &6036484772775784598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1198,7 @@ GameObject:
   - component: {fileID: 1952348747253116135}
   - component: {fileID: 5026237493401541904}
   - component: {fileID: 6543311124393169420}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ChuckGeo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1375,10 +1390,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 372135de531d18644a26b13a2ef261f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetController
+  maxHits: 3
   targetRenderer: {fileID: 1952348747253116135}
-  highlightMaterial: {fileID: 2100000, guid: 5c6a68d2a6a82064b8dd60e31ed965fc, type: 2}
-  destroyParticle: {fileID: 0}
-  destroySFX: {fileID: 0}
+  highlightMaterial: {fileID: 2100000, guid: 0d384473d36fdd947a71ee1863bb6390, type: 2}
+  hitSFX: {fileID: 8300000, guid: 89abc9b682f2c5e4e873a8cd4158c007, type: 3}
+  destroyParticle: {fileID: 5318118474938795682, guid: 69d8f05fda8421849a84b27b8c0d773d, type: 3}
+  destroySFX: {fileID: 8300000, guid: 0cb26420f3004d4458f36715f25628ce, type: 3}
+  hitCountText: {fileID: 0}
 --- !u!1 &7574859596378306544
 GameObject:
   m_ObjectHideFlags: 0

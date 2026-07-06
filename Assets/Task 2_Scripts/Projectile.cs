@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour
 
         if (targetController != null)
         {
-            targetController.DestroyTarget();
+            //targetController.DestroyTarget();
         }
 
         Destroy(gameObject);

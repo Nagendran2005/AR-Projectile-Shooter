@@ -970,13 +970,17 @@
         "dependencies": [
           {
             "name": "ParticleSystem",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/AR_Plane_Projectile_Shooter.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "ParticleSystemRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/AR_Plane_Projectile_Shooter.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           }

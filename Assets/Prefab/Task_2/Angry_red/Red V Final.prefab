@@ -654,8 +654,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5087276289897715254}
   - component: {fileID: 5350322697687369810}
-  - component: {fileID: 9104311583676650941}
-  - component: {fileID: 3300231928496042659}
   m_Layer: 6
   m_Name: body
   m_TagString: Untagged
@@ -768,43 +766,6 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00001531886, y: 0.0058364877, z: 0.00043410202}
     m_Extent: {x: 0.006813049, y: 0.010684819, z: 0.0065492117}
   m_DirtyAABB: 0
---- !u!65 &9104311583676650941
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4016935771854289334}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.020481782, y: 0.021369638, z: 0.013098423}
-  m_Center: {x: 0.0002660227, y: 0.012273393, z: 0.0009761614}
---- !u!114 &3300231928496042659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4016935771854289334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372135de531d18644a26b13a2ef261f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TargetController
-  targetRenderer: {fileID: 5350322697687369810}
-  highlightMaterial: {fileID: 2100000, guid: 5c6a68d2a6a82064b8dd60e31ed965fc, type: 2}
-  destroyParticle: {fileID: 0}
-  destroySFX: {fileID: 0}
 --- !u!1 &4177358891786146868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1247,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8914929365114540698}
   - component: {fileID: 324478912087987240}
+  - component: {fileID: 795818140531943469}
+  - component: {fileID: 4306562465702899802}
+  - component: {fileID: 4870417589926993342}
   m_Layer: 6
   m_Name: Red V Final
   m_TagString: Untagged
@@ -1327,6 +1291,60 @@ MonoBehaviour:
   speed: 2
   rotate: 1
   rotationSpeed: 45
+--- !u!114 &795818140531943469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475193430610044358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15d08bc83b328e41a3b52791266187c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ARTarget
+  maxHits: 3
+  explosionEffect: {fileID: 0}
+--- !u!114 &4306562465702899802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475193430610044358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372135de531d18644a26b13a2ef261f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TargetController
+  maxHits: 3
+  targetRenderer: {fileID: 5350322697687369810}
+  highlightMaterial: {fileID: 2100000, guid: 0d384473d36fdd947a71ee1863bb6390, type: 2}
+  hitSFX: {fileID: 8300000, guid: 89abc9b682f2c5e4e873a8cd4158c007, type: 3}
+  destroyParticle: {fileID: 5318118474938795682, guid: 69d8f05fda8421849a84b27b8c0d773d, type: 3}
+  destroySFX: {fileID: 8300000, guid: 0cb26420f3004d4458f36715f25628ce, type: 3}
+  hitCountText: {fileID: 0}
+--- !u!65 &4870417589926993342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475193430610044358}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.211601, y: 3.3663948, z: 2.3484278}
+  m_Center: {x: -0.0072265863, y: 1.0973653, z: -0.13159418}
 --- !u!1 &6872720565898550032
 GameObject:
   m_ObjectHideFlags: 0

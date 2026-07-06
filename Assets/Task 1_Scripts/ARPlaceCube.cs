@@ -13,6 +13,13 @@ public class ARPlaceCube : MonoBehaviour
     [Header("Prefab")]
     [SerializeField] private GameObject objectPrefab;
 
+    [Header("Custom Inspector Scaling Controls")]
+    [Tooltip("The final target local scale your prefab should reach once spawned.")]
+    [SerializeField] private Vector3 targetFinalScale = Vector3.one;
+
+    [Tooltip("The temporary maximum scale multiplier during the pop animation (e.g., 1.15 means it overshoots by 15%).")]
+    [SerializeField] private float popScaleMultiplier = 1.15f;
+
     [Header("UI")]
     [SerializeField] private TMP_Text statusText;
 
@@ -36,7 +43,8 @@ public class ARPlaceCube : MonoBehaviour
 
     void Start()
     {
-        statusText.text = detectingMessage;
+        if (statusText != null)
+            statusText.text = detectingMessage;
     }
 
     void Update()
@@ -52,14 +60,17 @@ public class ARPlaceCube : MonoBehaviour
         if (Input.touchCount > 0 &&
             Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            PlaceObject(Input.GetTouch(0).position);
+            // Block placement if a user is clicking overlay UI buttons
+            if (!UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject(Input.GetTouch(0).fingerId))
+            {
+                PlaceObject(Input.GetTouch(0).position);
+            }
         }
     }
 
     void CheckPlaneDetection()
     {
         Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
-
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
         bool foundPlane = raycastManager.Raycast(
@@ -70,12 +81,12 @@ public class ARPlaceCube : MonoBehaviour
         if (foundPlane && !planeDetected)
         {
             planeDetected = true;
-            statusText.text = detectedMessage;
+            if (statusText != null) statusText.text = detectedMessage;
         }
         else if (!foundPlane && planeDetected)
         {
             planeDetected = false;
-            statusText.text = detectingMessage;
+            if (statusText != null) statusText.text = detectingMessage;
         }
     }
 
@@ -90,10 +101,10 @@ public class ARPlaceCube : MonoBehaviour
             // Spawn prefab
             GameObject obj = Instantiate(objectPrefab, pose.position, pose.rotation);
 
-            // Start with scale 0
+            // Start completely invisible at 0
             obj.transform.localScale = Vector3.zero;
 
-            // Animate scale
+            // Animate scale dynamically using inspector parameters
             StartCoroutine(ScaleAnimation(obj.transform));
 
             // Play SFX
@@ -111,32 +122,32 @@ public class ARPlaceCube : MonoBehaviour
                     Quaternion.identity);
 
                 effect.Play();
-
                 Destroy(effect.gameObject, 1f);
             }
 
-            statusText.text = detectedMessage;
+            if (statusText != null) statusText.text = detectedMessage;
         }
     }
 
     IEnumerator ScaleAnimation(Transform target)
     {
         float timer = 0f;
+        Vector3 peakScale = targetFinalScale * popScaleMultiplier;
 
+        // Phase 1: Grow out from zero to the overshooting peak size
         while (timer < spawnDuration)
         {
             timer += Time.deltaTime;
 
-            float t = timer / spawnDuration;
+            float t = Mathf.Clamp01(timer / spawnDuration);
             t = Mathf.SmoothStep(0f, 1f, t);
 
-            float scale = Mathf.Lerp(0f, 1.15f, t);
-
-            target.localScale = Vector3.one * scale;
+            target.localScale = Vector3.Lerp(Vector3.zero, peakScale, t);
 
             yield return null;
         }
 
+        // Phase 2: Settle down from the peak back down smoothly to the desired final scale
         float bounceTime = 0.1f;
         timer = 0f;
 
@@ -144,16 +155,14 @@ public class ARPlaceCube : MonoBehaviour
         {
             timer += Time.deltaTime;
 
-            float t = timer / bounceTime;
+            float t = Mathf.Clamp01(timer / bounceTime);
 
-            target.localScale = Vector3.Lerp(
-                Vector3.one * 0.3f,
-                Vector3.one,
-                t);
+            target.localScale = Vector3.Lerp(peakScale, targetFinalScale, t);
 
             yield return null;
         }
 
-        target.localScale = Vector3.one;
+        // Lock perfectly into the user's Inspector scale settings
+        target.localScale = targetFinalScale;
     }
 }
