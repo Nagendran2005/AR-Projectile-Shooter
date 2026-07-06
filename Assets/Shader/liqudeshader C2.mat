@@ -43,7 +43,7 @@ Material:
     - _WobbleX: 0
     - _WobbleZ: 0
     - _ferstional_efect: 3
-    - _fill: 1
+    - _fill: 0.93
     m_Colors:
     - _fersnal: {r: 0.39190888, g: 0.85490197, b: 0, a: 1}
     - _liqude_colur: {r: 0.25399792, g: 1, b: 0.17924517, a: 1}
