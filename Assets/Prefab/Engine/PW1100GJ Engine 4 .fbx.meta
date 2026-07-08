@@ -1,0 +1,635 @@
+fileFormatVersion: 2
+guid: 24f15aeeae5617f4cb491ebec7125d98
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AIR_OIL HEAT EXCHANGER (AOHE)
+    second: {fileID: 2100000, guid: e5f02934a50a40f43a1041ff822cfb03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Angle Gearbox
+    second: {fileID: 2100000, guid: 731e44b16cf70094f87b5b0af1b8c3ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Auxillary Oil Reservoir
+    second: {fileID: 2100000, guid: 2ecdc5085313d034f9cc228190f9000c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bearings_TEC
+    second: {fileID: 2100000, guid: 30fcdc16a8cace646b1c7da03f791c1a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CIC Attachments
+    second: {fileID: 2100000, guid: bb904e27a87f11446913c935a2d97c34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: COre Cowl Actuator
+    second: {fileID: 2100000, guid: 42390ce73f47abc4e9870675ebd8f4b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CascadeHinges
+    second: {fileID: 2100000, guid: 4b96090414bc1f6439cd4746c32f48c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CasingComponents_1
+    second: {fileID: 2100000, guid: b447310d83300664392e6e8b01613048, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Casing_1
+    second: {fileID: 2100000, guid: 4390abd7af1aaf0479524026f44f3f0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Casing_2
+    second: {fileID: 2100000, guid: 849a524ebff675c488f9e3b7b6679e0c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Central Line_1
+    second: {fileID: 2100000, guid: a6ca3e672d51fbc459360747502d85c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Central Line_3
+    second: {fileID: 2100000, guid: c84947aa370186b4aa15a1ca561917b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Central Rod 2
+    second: {fileID: 2100000, guid: 53b9a0a83a782fb45bd5984fb1964b27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Central_Line_2
+    second: {fileID: 2100000, guid: 58d1e7c8126f0d841a96959a19851fa9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combustion Chamber
+    second: {fileID: 2100000, guid: eb5a196b3159a744facd971384a6c785, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combustion Chamber Head
+    second: {fileID: 2100000, guid: 1175efe3221248f45afe569decb233fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combustion Chamber Head Intake
+    second: {fileID: 2100000, guid: a5a4c6885e6088247b6c87cc6a767355, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Combustion Chamber Interiors
+    second: {fileID: 2100000, guid: 58088397bb18f0a41ba38794e9403b42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Compressor Intermediate Case
+    second: {fileID: 2100000, guid: 60ed13e0a271a4a4a9ec2916e650af88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CompressorCase Vents
+    second: {fileID: 2100000, guid: 71e95edb43209b84db841322d347bd48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Connectors_1
+    second: {fileID: 2100000, guid: 773d683d8ab025d459d51189935d588e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Core Cowl Sliding Track
+    second: {fileID: 2100000, guid: 9ecaab89a30c56743b2674cf3f43ee7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CoreCowl_Parts_1
+    second: {fileID: 2100000, guid: 9677396b6b26acc4dbaee888be7cfb51, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cowling Head
+    second: {fileID: 2100000, guid: b8ffa7f07a64e32438ab10a0e89e7d4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cowling Top
+    second: {fileID: 2100000, guid: 9c44d83b929d2794e93fba81509b4ab4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EEC Unit_2
+    second: {fileID: 2100000, guid: 78a199f219658554292a0bd42837af18, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fan Case Assembly Interiors
+    second: {fileID: 2100000, guid: 3850150461494b44984751dd71e44318, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fan Drive Gear System
+    second: {fileID: 2100000, guid: bba63185a757ece4ba87d2ee7aed07d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fan Drive Gear System External
+    second: {fileID: 2100000, guid: d973b249c87cce441841dbd9d1b8e1d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fan Exit Guide Vanes
+    second: {fileID: 2100000, guid: f8d41c1713fed96489daa1a450a23f4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FanCowl Latch Holder_L
+    second: {fileID: 2100000, guid: 006522f46a3269b45b105a93cf3945a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fancowl Latch Hook
+    second: {fileID: 2100000, guid: 961651cc318b8b945a9c9c5142f90e9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Forward Mount Assembly
+    second: {fileID: 2100000, guid: 68787163f702614429393685680f0a77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Forward Mount Assembly Supports
+    second: {fileID: 2100000, guid: aa4c020084b75ac46be71f1b8db6480e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fuel Filter Case
+    second: {fileID: 2100000, guid: 373455291ae498e4490c66b786d6ba5a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fuel Filter_
+    second: {fileID: 2100000, guid: 309ebc76d051f7543978682c2b233d44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Fuel Nozzle Sprinklers
+    second: {fileID: 2100000, guid: 84d7249e90f4fa241b7af1ba365fe69b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Green old metal
+    second: {fileID: 2100000, guid: d0d2eae479b91ca48bc69dac4622d597, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HPT Manifold
+    second: {fileID: 2100000, guid: 4c40647044314c24581f009855709739, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: IDG
+    second: {fileID: 2100000, guid: 0f4ffdd3f59b1584da8a89bb8051b735, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: IFPC
+    second: {fileID: 2100000, guid: 9efd5a4a1b1929f478bf443f5008abc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: IFPC.002
+    second: {fileID: 2100000, guid: f748118d300953b4c8f597dae45aae7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ignition System Exciter
+    second: {fileID: 2100000, guid: c93ffaab97c9dcd4081611bfedf9aa2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ignitor Plug and Screw
+    second: {fileID: 2100000, guid: 5249482266a56bd4a95bd7a15e1c73ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LH Core Cowl
+    second: {fileID: 2100000, guid: ece5701a1519dda4f9de9f445fdf5616, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LH Fan Cowl Access Hatch
+    second: {fileID: 2100000, guid: de24459cc915d934b942078c4c5111e4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LH Fan Cowl_1
+    second: {fileID: 2100000, guid: d29de0b48cdd929459a62ce8fb6c37b5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LH Fan Cowl_2
+    second: {fileID: 2100000, guid: aedcb95ee82e8fe4da816693ce04f030, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LPT Manifold
+    second: {fileID: 2100000, guid: 2645c8b2a2a1dbd4caac3f740b07a1f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LSOP
+    second: {fileID: 2100000, guid: e926c8a44139c054f84fbf544323704a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light iron
+    second: {fileID: 2100000, guid: 68fedef1b4ed98449b48dedfe584bece, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MGB_1
+    second: {fileID: 2100000, guid: 18673bfcbd8e7254c9a3e627bd8eb735, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MGB_2
+    second: {fileID: 2100000, guid: c6677b56ab7c34944af0f1e46eccdfb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MGB_3
+    second: {fileID: 2100000, guid: c1f8033cc07601743b99578ea6f0a949, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MGB_4
+    second: {fileID: 2100000, guid: d869228c17fe15e44a953e90b488699f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainEngine Stators_1
+    second: {fileID: 2100000, guid: 2d354fe56d3a54247996550bebe03fd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainEngine2_Attachments
+    second: {fileID: 2100000, guid: 1c13afcb45cc361479017122b8dc8a2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainEngine_1
+    second: {fileID: 2100000, guid: 721e917620f6a9c469807c0d3d02b493, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainEngine_2
+    second: {fileID: 2100000, guid: cf17aa0cc2f5ab247a141dfe9af0a03a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainEngine_Underslide
+    second: {fileID: 2100000, guid: 82d083ddf9daec8478bf9519fa2dc78f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 5bfab4c0a7178bd41a983cea0fcefefb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 85fd53f20e0012340b3999d91dc65c34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oil Control Module
+    second: {fileID: 2100000, guid: 4253b8b1af8f6bf42821d6fd710faec7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oil Pump
+    second: {fileID: 2100000, guid: c39a256e7cc3bfb4abff097fc3b8a5fa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oil Pump Cap
+    second: {fileID: 2100000, guid: 96f6f556a76160c4a95713aa1c5b3a77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planetary Gear System 2
+    second: {fileID: 2100000, guid: 8729a167e6b060e4da53a825fd83808e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planetary Gear System 3
+    second: {fileID: 2100000, guid: 7cde53561d7b87643a78e23b8fa0d44e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planetary Gear System Rod
+    second: {fileID: 2100000, guid: 50881b60704efc245ac87040398b30cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Planetary Gear System_1
+    second: {fileID: 2100000, guid: cc1a77e4fc492d642b70ad5c52007e86, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PlanetaryGear_1
+    second: {fileID: 2100000, guid: eda6266bdcf689e4ea54e2b1bbfb58c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Primary Stator Actuators
+    second: {fileID: 2100000, guid: 32af5221d0f6aab4685da43990db2dbf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Propeller Nose
+    second: {fileID: 2100000, guid: 193abb284ed9a174e998301fd17cb03e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Propeller Stator Blades
+    second: {fileID: 2100000, guid: 13239d3358e59414ba11c9c69afaf6d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Propellers_1
+    second: {fileID: 2100000, guid: a313cb356d367e845b53eeb6da6d7bc4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Propellers_2
+    second: {fileID: 2100000, guid: cbb52bbe01d300a4fba3f3ae0a497e0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Propellers_3
+    second: {fileID: 2100000, guid: 4eca3046c81991941badb139df3c50b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pump_2
+    second: {fileID: 2100000, guid: db0ba0e3d70cfbc43a2ba19bb7a4c777, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RH Fan Cowl_1
+    second: {fileID: 2100000, guid: 9cf12f95cd12cfb46b08e0518f9d4d71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RH Fan Cowl_2
+    second: {fileID: 2100000, guid: fa0ea8c1975b3044db6651b6e6bd2ad9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rear Shear Pins_
+    second: {fileID: 2100000, guid: f8972d7b5623b464b906d004878606ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rear Tail
+    second: {fileID: 2100000, guid: 11531122d8f504949a2847bf3f498e93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Secondary Stators
+    second: {fileID: 2100000, guid: 92ae4d81be85f59449c0e1dad2e59f28, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Some Bracket
+    second: {fileID: 2100000, guid: 8a58ca44f5384894da07648aa89e18eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Starter Air Turbine
+    second: {fileID: 2100000, guid: e1053692affa7304ab83463c9659e343, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stator Control System
+    second: {fileID: 2100000, guid: 642bc6f6b35430d4586bcba44a1dcf3c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stator Holding Line
+    second: {fileID: 2100000, guid: 69ed761fdb7d5304a965d6d771d052b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stator Rod_1
+    second: {fileID: 2100000, guid: fb26cc7a7e2de5747a2096ff1a5bbe67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steel Glossy
+    second: {fileID: 2100000, guid: d054bc3dde3028c42bd4f48c68331e45, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Strakes
+    second: {fileID: 2100000, guid: c5fbcd5c3e1b3cf4cb2d5fbf05f65d11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TR Door Flaps
+    second: {fileID: 2100000, guid: 1d078a461bc16a646a9764fe0d239699, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TRAS Inhibitor Panel
+    second: {fileID: 2100000, guid: 4aeff55eb99182a4c9bbb5b98d506936, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tertiary Slator Holders
+    second: {fileID: 2100000, guid: a4ad4de4a28052445b619e94cf5040b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tertiary Stators
+    second: {fileID: 2100000, guid: 462eb324ef790be44bee7c510a9d3ef9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thrust Reverser Doors
+    second: {fileID: 2100000, guid: 8019af363f2ea674d91a1e08d1b0edd4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Thrust Reverser Lever
+    second: {fileID: 2100000, guid: 6a81be31bd9e8b748ac566004a2518f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: To be Named 4
+    second: {fileID: 2100000, guid: 06f64b84affaf5a4a8d965fb9a44fc13, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: To be named 1
+    second: {fileID: 2100000, guid: e4cd73665f51e2f42bae887420bad19b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: To be named 5
+    second: {fileID: 2100000, guid: f563398efaf695846a7ae2d8d0c11da1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Turbine Exhaust Case
+    second: {fileID: 2100000, guid: 80f9544c948d5004cb82c03aa3c487d0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Worn Brushed Metal
+    second: {fileID: 2100000, guid: 278496e71c0278f4f9a42eeb06014ee0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mgb part
+    second: {fileID: 2100000, guid: a0ed74dd09ac6204c86ca289c3cafaeb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: to be named 2
+    second: {fileID: 2100000, guid: 0899dbd45e9cdf548b2891ede7f4bece, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: to be named 3
+    second: {fileID: 2100000, guid: 0527394218f7e384096438e980c24995, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: to be named 7
+    second: {fileID: 2100000, guid: 72b8445bd9cf93d409018e25789d6b31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: to be named 8
+    second: {fileID: 2100000, guid: 8f475ce2a49762f42b338090789a35dd, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
