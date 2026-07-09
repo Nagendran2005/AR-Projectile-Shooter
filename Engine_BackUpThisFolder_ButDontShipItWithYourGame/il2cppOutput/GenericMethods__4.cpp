@@ -9242,6 +9242,30 @@ struct Unit_tAE6456027618FB5F9E5CCB6E5C209250AC5695CC
 {
 	int32_t ___value__;
 };
+struct SystemPartConfig_tC6A7D666EB83E1EF4EEA82E2128D4D0133E9860D 
+{
+	String_t* ___partIdentifierName;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___targetTransform;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___explodedLocalPosition;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___explodedLocalRotation;
+	float ___continuousRotationSpeed;
+};
+struct SystemPartConfig_tC6A7D666EB83E1EF4EEA82E2128D4D0133E9860D_marshaled_pinvoke
+{
+	char* ___partIdentifierName;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___targetTransform;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___explodedLocalPosition;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___explodedLocalRotation;
+	float ___continuousRotationSpeed;
+};
+struct SystemPartConfig_tC6A7D666EB83E1EF4EEA82E2128D4D0133E9860D_marshaled_com
+{
+	Il2CppChar* ___partIdentifierName;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___targetTransform;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___explodedLocalPosition;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___explodedLocalRotation;
+	float ___continuousRotationSpeed;
+};
 struct MaskMesh_tBA4A29153655DB02C99D6BF624A64795A084806B 
 {
 	NativeSlice_1_t66375568C4FF313931F4D2F646D64FE6A406BAD2 ___vertices;
@@ -49181,6 +49205,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_InternalArray__ICollection_Add_Tis
 }
 // Method Definition Index: 2691
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_InternalArray__ICollection_Add_TisScalerContainer_t8C9EBECAB45F9B7C806AF9F477262E5F80F5E375_m181672391A74093A0EFEF0DD3607EA185739B37B_gshared (RuntimeArray* __this, ScalerContainer_t8C9EBECAB45F9B7C806AF9F477262E5F80F5E375 ___0_item, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NotSupportedException__ctor_mE174750CF0247BBB47544FFD71D66BB89630945B(L_0, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralE609303EB41E0119BB804EB107C7CCDF29D97D5B)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
+	}
+}
+// Method Definition Index: 2691
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Array_InternalArray__ICollection_Add_TisSystemPartConfig_tC6A7D666EB83E1EF4EEA82E2128D4D0133E9860D_m504C92D41AACA7AA639D038C78E35ECA152CD7E4_gshared (RuntimeArray* __this, SystemPartConfig_tC6A7D666EB83E1EF4EEA82E2128D4D0133E9860D ___0_item, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));

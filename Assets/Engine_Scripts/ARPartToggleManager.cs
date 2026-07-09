@@ -5,8 +5,8 @@ using UnityEngine;
 public class ARPartToggleManager : MonoBehaviour
 {
     [Header("Director Reference Integration")]
-    [Tooltip("Drag the GameObject with your ARLiquidGameDirector script here.")]
-    [SerializeField] private ARLiquidGameDirector gameDirector;
+    [Tooltip("Drag the GameObject with your new ARDirectPlacementDirector script here.")]
+    [SerializeField] private ARDirectPlacementDirector placementDirector;
 
     [Header("Alternative Swap Assets")]
     [Tooltip("The detailed part prefabs that correspond to your original source prefabs list. Keep the list order identical!")]
@@ -15,7 +15,6 @@ public class ARPartToggleManager : MonoBehaviour
     [Header("Animate Scaling Curves")]
     [SerializeField] private float transitionDuration = 0.25f;
 
-    // Track the runtime instantiated instances
     private List<GameObject> activeSwappedInstances = new List<GameObject>();
     private List<GameObject> capturedOriginalInstances = new List<GameObject>();
     private bool isShowingDetailedParts = false;
@@ -25,20 +24,18 @@ public class ARPartToggleManager : MonoBehaviour
     /// </summary>
     public void ExecutePartSwapSwapSequence()
     {
-        if (isShowingDetailedParts) return; // Prevent double execution if already showing detailed parts
+        if (isShowingDetailedParts) return;
 
-        // Find all active capsule objects spawned in the scene dynamically
+        // Locate what was dynamically spawned onto the touch coordinates
         CaptureSpawnedOriginalTargets();
 
         if (capturedOriginalInstances.Count == 0)
         {
-            Debug.LogWarning("[ARPartToggleManager] No spawned active original targets detected in the scene to swap.");
+            Debug.LogWarning("[ARPartToggleManager] No active targets detected yet. Make sure you tap the floor to spawn the object first!");
             return;
         }
 
         isShowingDetailedParts = true;
-
-        // Clear out any old swapped items safely if they exist
         ClearSwappedRegistry();
 
         for (int i = 0; i < capturedOriginalInstances.Count; i++)
@@ -46,31 +43,31 @@ public class ARPartToggleManager : MonoBehaviour
             GameObject originalObj = capturedOriginalInstances[i];
             if (originalObj == null) continue;
 
-            // Pick the matching detailed asset index framework (fallback to index 0 if array bounds mismatch)
+            // Pick the matching detailed asset index safely
             int prefabIndex = Mathf.Min(i, alternativeDetailedPrefabs.Length - 1);
             if (alternativeDetailedPrefabs[prefabIndex] == null) continue;
 
             // Hide the original spawned object seamlessly
             originalObj.SetActive(false);
 
-            // Instantiate the alternative detailed piece at the exact same location coordinates
+            // Instantiate the alternative detailed piece at the exact touch position it currently sits
             GameObject detailedInstance = Instantiate(
                 alternativeDetailedPrefabs[prefabIndex],
                 originalObj.transform.position,
-                originalObj.transform.rotation
+                originalObj.transform.rotation,
+                originalObj.transform.parent // Keep the exact same spatial hierarchy structure
             );
 
-            // Mirror the current master hierarchy scale
+            // Maintain visual scale parity
             detailedInstance.transform.localScale = originalObj.transform.localScale;
             activeSwappedInstances.Add(detailedInstance);
 
-            // Optional structural presentation pop juice
             StartCoroutine(ExecuteScalingTransition(detailedInstance.transform, Vector3.zero, originalObj.transform.localScale));
         }
     }
 
     /// <summary>
-    /// Call this function from your 'BACK' Button OnClick() event handler loop to reverse the swap.
+    /// Call this function from your 'BACK' Button OnClick() event handler loop.
     /// </summary>
     public void ExecuteReverseReversionSequence()
     {
@@ -78,20 +75,17 @@ public class ARPartToggleManager : MonoBehaviour
 
         isShowingDetailedParts = false;
 
-        // Restore visibility back to all original spawned parts tracking elements
+        // Restore visibility back to all original spawned elements
         for (int i = 0; i < capturedOriginalInstances.Count; i++)
         {
             if (capturedOriginalInstances[i] != null)
             {
                 capturedOriginalInstances[i].SetActive(true);
-
-                // Pop the original back into view smoothly
                 Vector3 targetScale = capturedOriginalInstances[i].transform.localScale;
                 StartCoroutine(ExecuteScalingTransition(capturedOriginalInstances[i].transform, Vector3.zero, targetScale));
             }
         }
 
-        // Wipe out the temporary alternative modular display pieces safely
         ClearSwappedRegistry();
     }
 
@@ -99,14 +93,38 @@ public class ARPartToggleManager : MonoBehaviour
     {
         capturedOriginalInstances.Clear();
 
-        // Dynamically locate any active target elements matching the template signature in the scene
-        ARLiquidCapsule[] objectsInScene = FindObjectsByType<ARLiquidCapsule>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-
-        foreach (ARLiquidCapsule capsule in objectsInScene)
+        if (placementDirector == null)
         {
-            if (capsule != null)
+            placementDirector = Object.FindFirstObjectByType<ARDirectPlacementDirector>();
+
+            if (placementDirector == null)
             {
-                capturedOriginalInstances.Add(capsule.gameObject);
+                Debug.LogError("[ARPartToggleManager] ARDirectPlacementDirector reference is missing! Please assign it in the inspector.");
+                return;
+            }
+        }
+
+        // FIX: Search by Transform instead of Collider. This detects any object regardless of physics components.
+        Transform[] allTransforms = Object.FindObjectsByType<Transform>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+
+        foreach (Transform t in allTransforms)
+        {
+            GameObject go = t.gameObject;
+
+            // Check if the object is a clone spawned by the director
+            if (go.name.Contains("(Clone)") && !go.name.Contains("Bullet") && !go.name.Contains("Canvas"))
+            {
+                // Find the top-most root parent of this clone to prevent grabbing interior child pieces
+                Transform rootClone = t;
+                while (rootClone.parent != null && rootClone.parent.name.Contains("(Clone)"))
+                {
+                    rootClone = rootClone.parent;
+                }
+
+                if (!capturedOriginalInstances.Contains(rootClone.gameObject))
+                {
+                    capturedOriginalInstances.Add(rootClone.gameObject);
+                }
             }
         }
     }
@@ -115,10 +133,7 @@ public class ARPartToggleManager : MonoBehaviour
     {
         foreach (GameObject obj in activeSwappedInstances)
         {
-            if (obj != null)
-            {
-                Destroy(obj);
-            }
+            if (obj != null) Destroy(obj);
         }
         activeSwappedInstances.Clear();
     }
@@ -134,9 +149,7 @@ public class ARPartToggleManager : MonoBehaviour
 
             timer += Time.deltaTime;
             float progress = Mathf.Clamp01(timer / transitionDuration);
-            progress = Mathf.SmoothStep(0f, 1f, progress); // Smooth easing curve
-
-            targetTransform.localScale = Vector3.Lerp(fromScale, toScale, progress);
+            targetTransform.localScale = Vector3.Lerp(fromScale, toScale, Mathf.SmoothStep(0f, 1f, progress));
             yield return null;
         }
 

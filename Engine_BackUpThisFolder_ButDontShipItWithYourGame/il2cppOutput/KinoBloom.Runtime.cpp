@@ -412,7 +412,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Log_m5A3BBBF06AB82F25C885812E07D2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95743
+// Method Definition Index: 95800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t3C947E566E2B4D528827132CDF6C195EC7DE6F91 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m54B761E06F7894CBA5A268FAE1F889D9A7ED653F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -446,7 +446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t3C947E566E2B4D528827132CDF6C1
 		return L_6;
 	}
 }
-// Method Definition Index: 95744
+// Method Definition Index: 95801
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mF7AE4FDE3C30127968C3EA8EA92D1D04A504ADB0 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC03F5554B02AF8BD6DDC7FF1CE68CB8502B769E1* __this, const RuntimeMethod* method) 
 {
 	{
@@ -532,33 +532,33 @@ IL2CPP_EXTERN_C void MonoScriptData_t3C947E566E2B4D528827132CDF6C195EC7DE6F91_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 95745
+// Method Definition Index: 95802
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Bloom_get_thresholdGamma_m0B91BAD6344981D8E6F23872F82F0661BD86ACDE (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:44>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:44>
 		float L_0 = __this->____threshold;
 		float L_1;
 		L_1 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(L_0, (0.0f), NULL);
 		return L_1;
 	}
 }
-// Method Definition Index: 95746
+// Method Definition Index: 95803
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_set_thresholdGamma_m6815A4F1C92ED38364AECFBE8FB3B9B13536F661 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:45>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:45>
 		float L_0 = ___0_value;
 		__this->____threshold = L_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:45>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:45>
 		return;
 	}
 }
-// Method Definition Index: 95747
+// Method Definition Index: 95804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Bloom_get_thresholdLinear_mC4BAE80A96C574D2DD4889F70791A0A886362CB5 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:52>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:52>
 		float L_0;
 		L_0 = Bloom_get_thresholdGamma_m0B91BAD6344981D8E6F23872F82F0661BD86ACDE(__this, NULL);
 		float L_1;
@@ -566,144 +566,144 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Bloom_get_thresholdLinear_mC4BAE80A96C5
 		return L_1;
 	}
 }
-// Method Definition Index: 95748
+// Method Definition Index: 95805
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_set_thresholdLinear_m7BBC09CA8ECA8279F5033CAE0EC1855625BBB93C (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:53>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:53>
 		float L_0 = ___0_value;
 		float L_1;
 		L_1 = Bloom_LinearToGamma_mC8BBA7DAC0B85588382025A2A9EAA866AEA07EF2(__this, L_0, NULL);
 		__this->____threshold = L_1;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:53>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 95749
+// Method Definition Index: 95806
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Bloom_get_softKnee_m7FE308F6881EEB607B4B9E90CFA555118EF78CF0 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:64>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:64>
 		float L_0 = __this->____softKnee;
 		return L_0;
 	}
 }
-// Method Definition Index: 95750
+// Method Definition Index: 95807
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_set_softKnee_m0662BE9493EE34E744ED437A2BC5E14C2BFB2987 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:65>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:65>
 		float L_0 = ___0_value;
 		__this->____softKnee = L_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:65>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:65>
 		return;
 	}
 }
-// Method Definition Index: 95751
+// Method Definition Index: 95808
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Bloom_get_radius_mDAC194446B02A7522F4E8B20919D0DA0A252CAFB (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:77>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:77>
 		float L_0 = __this->____radius;
 		return L_0;
 	}
 }
-// Method Definition Index: 95752
+// Method Definition Index: 95809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_set_radius_mBAD5FE4B71E4FC4E475BA5CA602356A5E2874CCA (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:78>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:78>
 		float L_0 = ___0_value;
 		__this->____radius = L_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:78>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:78>
 		return;
 	}
 }
-// Method Definition Index: 95753
+// Method Definition Index: 95810
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Bloom_get_intensity_m62468D24C9D0155C778FEDFFD909A7846668D09A (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:90>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:90>
 		float L_0 = __this->____intensity;
 		float L_1;
 		L_1 = Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline(L_0, (0.0f), NULL);
 		return L_1;
 	}
 }
-// Method Definition Index: 95754
+// Method Definition Index: 95811
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_set_intensity_m4715BD004C291DD33A0DC0DC6D4DE0C42DE4F4E2 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, float ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:91>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:91>
 		float L_0 = ___0_value;
 		__this->____intensity = L_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:91>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:91>
 		return;
 	}
 }
-// Method Definition Index: 95755
+// Method Definition Index: 95812
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bloom_get_highQuality_m11E16391564428D74D1E5C8B76F8CF8300BCBC59 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:102>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:102>
 		bool L_0 = __this->____highQuality;
 		return L_0;
 	}
 }
-// Method Definition Index: 95756
+// Method Definition Index: 95813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_set_highQuality_m076A62131453AF7FFA9866AF7463D3BE46A18A0B (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:103>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:103>
 		bool L_0 = ___0_value;
 		__this->____highQuality = L_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:103>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:103>
 		return;
 	}
 }
-// Method Definition Index: 95757
+// Method Definition Index: 95814
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Bloom_get_antiFlicker_m5DC8868C04E8C19E85D2A6DCAED4B2447F9EEF68 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:118>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:118>
 		bool L_0 = __this->____antiFlicker;
 		return L_0;
 	}
 }
-// Method Definition Index: 95758
+// Method Definition Index: 95815
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_set_antiFlicker_m881F189D848A953C7DF8E0053D76BED98154D61C (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:119>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:119>
 		bool L_0 = ___0_value;
 		__this->____antiFlicker = L_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:119>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:119>
 		return;
 	}
 }
-// Method Definition Index: 95759
+// Method Definition Index: 95816
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Bloom_LinearToGamma_mC8BBA7DAC0B85588382025A2A9EAA866AEA07EF2 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:140>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:140>
 		float L_0 = ___0_x;
 		float L_1;
 		L_1 = Mathf_LinearToGammaSpace_m768087E2BF400DB5FD77FD5AF4EAF6694E9F34F1(L_0, NULL);
 		return L_1;
 	}
 }
-// Method Definition Index: 95760
+// Method Definition Index: 95817
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Bloom_GammaToLinear_mE7A60D9869AA3CA47DD8AB6B03918DCF15C3F3DA (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, float ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:152>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:152>
 		float L_0 = ___0_x;
 		float L_1;
 		L_1 = Mathf_GammaToLinearSpace_mEF9E26BAD322E55448B286ABDCDF4A2CC236547F(L_0, NULL);
 		return L_1;
 	}
 }
-// Method Definition Index: 95761
+// Method Definition Index: 95818
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_OnEnable_mFC995393B810C1696187D7E1B9779AAAAED4CBE3 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -717,7 +717,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_OnEnable_mFC995393B810C1696187D7E1
 	Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* V_0 = NULL;
 	Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* G_B3_0 = NULL;
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:167>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:167>
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_0 = __this->____shader;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -743,21 +743,21 @@ IL_0019:
 IL_001f:
 	{
 		V_0 = G_B3_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:168>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:168>
 		Shader_tADC867D36B7876EE22427FAA2CE485105F4EE692* L_4 = V_0;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_5 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)il2cpp_codegen_object_new(Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_il2cpp_TypeInfo_var);
 		Material__ctor_m7FDF47105D66D19591BE505A0C42B0F90D88C9BF(L_5, L_4, NULL);
 		__this->____material = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____material), (void*)L_5);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:169>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:169>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_6 = __this->____material;
 		NullCheck(L_6);
 		Object_set_hideFlags_mACB8BFC903FB3B01BBD427753E791BF28B5E33D4(L_6, ((int32_t)52), NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:170>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:170>
 		return;
 	}
 }
-// Method Definition Index: 95762
+// Method Definition Index: 95819
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_OnDisable_m24ECC6E1E4258545857EFDB8110DAB76B3FBA8EB (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -767,15 +767,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_OnDisable_m24ECC6E1E4258545857EFDB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:174>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:174>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_0 = __this->____material;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DestroyImmediate_m6336EBC83591A5DB64EC70C92132824C6E258705(L_0, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:175>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:175>
 		return;
 	}
 }
-// Method Definition Index: 95763
+// Method Definition Index: 95820
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_OnRenderImage_m2FA867D44BD6651C9723F93D4650DE16EF3058B5 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* ___0_source, RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* ___1_destination, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -826,23 +826,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_OnRenderImage_m2FA867D44BD6651C972
 	int32_t G_B26_0 = 0;
 	int32_t G_B31_0 = 0;
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:179>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:179>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		bool L_0;
 		L_0 = Application_get_isMobilePlatform_mE0BBFDE72BBFE5877581FA67DDBBFC397608AFCA(NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:182>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:182>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_1 = ___0_source;
 		NullCheck(L_1);
 		int32_t L_2;
 		L_2 = VirtualFuncInvoker0< int32_t >::Invoke(5, L_1);
 		V_0 = L_2;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:183>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:183>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_3 = ___0_source;
 		NullCheck(L_3);
 		int32_t L_4;
 		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(7, L_3);
 		V_1 = L_4;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:186>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:186>
 		bool L_5 = __this->____highQuality;
 		if (L_5)
 		{
@@ -852,10 +852,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_OnRenderImage_m2FA867D44BD6651C972
 		G_B1_0 = L_0;
 	}
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:188>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:188>
 		int32_t L_6 = V_0;
 		V_0 = ((int32_t)(L_6/2));
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:189>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:189>
 		int32_t L_7 = V_1;
 		V_1 = ((int32_t)(L_7/2));
 		G_B2_0 = G_B1_0;
@@ -863,8 +863,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom_OnRenderImage_m2FA867D44BD6651C972
 
 IL_0023:
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:193>
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:194>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:193>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:194>
 		if (G_B2_0)
 		{
 			goto IL_0029;
@@ -883,47 +883,47 @@ IL_0029:
 IL_002a:
 	{
 		V_2 = G_B5_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:197>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:197>
 		int32_t L_8 = V_1;
 		float L_9;
 		L_9 = Mathf_Log_m116F062EEBF1C53EC8D18C9B1748E999EF9424EF_inline(((float)L_8), (2.0f), NULL);
 		float L_10 = __this->____radius;
 		V_3 = ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_add(L_9, L_10)), (8.0f)));
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:198>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:198>
 		float L_11 = V_3;
 		V_4 = il2cpp_codegen_cast_double_to_int<int32_t>(L_11);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:199>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:199>
 		int32_t L_12 = V_4;
 		int32_t L_13;
 		L_13 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_12, 1, ((int32_t)16), NULL);
 		V_5 = L_13;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:202>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:202>
 		float L_14;
 		L_14 = Bloom_get_thresholdLinear_mC4BAE80A96C574D2DD4889F70791A0A886362CB5(__this, NULL);
 		V_6 = L_14;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:203>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:203>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_15 = __this->____material;
 		float L_16 = V_6;
 		NullCheck(L_15);
 		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(L_15, _stringLiteral207B3D9446F2D4167D3D15FA99BDA04AA93AD0A0, L_16, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:205>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:205>
 		float L_17 = V_6;
 		float L_18 = __this->____softKnee;
 		V_7 = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_multiply(L_17, L_18)), (9.99999975E-06f)));
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:206>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:206>
 		float L_19 = V_6;
 		float L_20 = V_7;
 		float L_21 = V_7;
 		float L_22 = V_7;
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_8), ((float)il2cpp_codegen_subtract(L_19, L_20)), ((float)il2cpp_codegen_multiply(L_21, (2.0f))), ((float)((0.25f)/L_22)), NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:207>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:207>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_23 = __this->____material;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = V_8;
 		Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 L_25;
 		L_25 = Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline(L_24, NULL);
 		NullCheck(L_23);
 		Material_SetVector_m69444B8040D955821F241113446CC8713C9E12D1(L_23, _stringLiteral87C43E0C533B5BE7D4EAEA9F762B4B033313B85F, L_25, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:209>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:209>
 		bool L_26 = __this->____highQuality;
 		if (L_26)
 		{
@@ -944,7 +944,7 @@ IL_00c3:
 IL_00c4:
 	{
 		V_9 = (bool)G_B8_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:210>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:210>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_28 = __this->____material;
 		bool L_29 = V_9;
 		if (L_29)
@@ -974,26 +974,26 @@ IL_00e1:
 	{
 		NullCheck(G_B11_2);
 		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(G_B11_2, G_B11_1, G_B11_0, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:212>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:212>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_30 = __this->____material;
 		float L_31 = V_3;
 		int32_t L_32 = V_4;
 		NullCheck(L_30);
 		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(L_30, _stringLiteral3CB951C5C06E2A9CE696B22F5090A82016181ECD, ((float)il2cpp_codegen_subtract(((float)il2cpp_codegen_add((0.5f), L_31)), ((float)L_32))), NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:213>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:213>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_33 = __this->____material;
 		float L_34;
 		L_34 = Bloom_get_intensity_m62468D24C9D0155C778FEDFFD909A7846668D09A(__this, NULL);
 		NullCheck(L_33);
 		Material_SetFloat_m879CF81D740BAE6F23C9822400679F4D16365836(L_33, _stringLiteral4E207A1E776F6188653FF9228A95BFD3A17B492E, L_34, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:216>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:216>
 		int32_t L_35 = V_0;
 		int32_t L_36 = V_1;
 		int32_t L_37 = V_2;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_38;
 		L_38 = RenderTexture_GetTemporary_mDAD0D2A673F07BEC3B1A9555863E24A479E9BB11(L_35, L_36, 0, L_37, NULL);
 		V_10 = L_38;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:217>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:217>
 		bool L_39 = __this->____antiFlicker;
 		if (L_39)
 		{
@@ -1013,26 +1013,26 @@ IL_012d:
 IL_012e:
 	{
 		V_11 = G_B14_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:218>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:218>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_40 = ___0_source;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_41 = V_10;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_42 = __this->____material;
 		int32_t L_43 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(Graphics_t99CD970FFEA58171C70F54DF0C06D315BD452F2C_il2cpp_TypeInfo_var);
 		Graphics_Blit_m1875691D6AAA8CF8EDE8508538714CF895E36779(L_40, L_41, L_42, L_43, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:221>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:221>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_44 = V_10;
 		V_12 = L_44;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:222>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:222>
 		V_13 = 0;
 		goto IL_01a9;
 	}
 
 IL_0149:
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:224>
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:225>
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:226>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:224>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:225>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:226>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_45 = __this->____blurBuffer1;
 		int32_t L_46 = V_13;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_47 = V_12;
@@ -1049,7 +1049,7 @@ IL_0149:
 		NullCheck(L_45);
 		ArrayElementTypeCheck (L_45, L_52);
 		(L_45)->SetAt(static_cast<il2cpp_array_size_t>(L_46), (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27*)L_52);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:228>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:228>
 		int32_t L_53 = V_13;
 		if (!L_53)
 		{
@@ -1082,7 +1082,7 @@ IL_017d:
 IL_017e:
 	{
 		V_11 = G_B20_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:229>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:229>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_55 = V_12;
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_56 = __this->____blurBuffer1;
 		int32_t L_57 = V_13;
@@ -1093,21 +1093,21 @@ IL_017e:
 		int32_t L_61 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(Graphics_t99CD970FFEA58171C70F54DF0C06D315BD452F2C_il2cpp_TypeInfo_var);
 		Graphics_Blit_m1875691D6AAA8CF8EDE8508538714CF895E36779(L_55, L_59, L_60, L_61, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:231>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:231>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_62 = __this->____blurBuffer1;
 		int32_t L_63 = V_13;
 		NullCheck(L_62);
 		int32_t L_64 = L_63;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_65 = (L_62)->GetAt(static_cast<il2cpp_array_size_t>(L_64));
 		V_12 = L_65;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:222>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:222>
 		int32_t L_66 = V_13;
 		V_13 = ((int32_t)il2cpp_codegen_add(L_66, 1));
 	}
 
 IL_01a9:
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:222>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:222>
 		int32_t L_67 = V_13;
 		int32_t L_68 = V_5;
 		if ((((int32_t)L_67) < ((int32_t)L_68)))
@@ -1116,7 +1116,7 @@ IL_01a9:
 		}
 	}
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:235>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:235>
 		int32_t L_69 = V_5;
 		V_14 = ((int32_t)il2cpp_codegen_subtract(L_69, 2));
 		goto IL_0229;
@@ -1124,21 +1124,21 @@ IL_01a9:
 
 IL_01b7:
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:237>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:237>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_70 = __this->____blurBuffer1;
 		int32_t L_71 = V_14;
 		NullCheck(L_70);
 		int32_t L_72 = L_71;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_73 = (L_70)->GetAt(static_cast<il2cpp_array_size_t>(L_72));
 		V_15 = L_73;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:238>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:238>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_74 = __this->____material;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_75 = V_15;
 		NullCheck(L_74);
 		Material_SetTexture_m06083C3F52EF02FFB1177901D9907314F280F9A5(L_74, _stringLiteralD62D0620DCC59E7C5F2161A049F9FF6D888D2E74, L_75, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:240>
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:241>
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:242>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:240>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:241>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:242>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_76 = __this->____blurBuffer2;
 		int32_t L_77 = V_14;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_78 = V_15;
@@ -1155,7 +1155,7 @@ IL_01b7:
 		NullCheck(L_76);
 		ArrayElementTypeCheck (L_76, L_83);
 		(L_76)->SetAt(static_cast<il2cpp_array_size_t>(L_77), (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27*)L_83);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:244>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:244>
 		bool L_84 = __this->____highQuality;
 		if (L_84)
 		{
@@ -1175,7 +1175,7 @@ IL_01fd:
 IL_01fe:
 	{
 		V_11 = G_B26_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:245>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:245>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_85 = V_12;
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_86 = __this->____blurBuffer2;
 		int32_t L_87 = V_14;
@@ -1186,21 +1186,21 @@ IL_01fe:
 		int32_t L_91 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(Graphics_t99CD970FFEA58171C70F54DF0C06D315BD452F2C_il2cpp_TypeInfo_var);
 		Graphics_Blit_m1875691D6AAA8CF8EDE8508538714CF895E36779(L_85, L_89, L_90, L_91, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:246>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:246>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_92 = __this->____blurBuffer2;
 		int32_t L_93 = V_14;
 		NullCheck(L_92);
 		int32_t L_94 = L_93;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_95 = (L_92)->GetAt(static_cast<il2cpp_array_size_t>(L_94));
 		V_12 = L_95;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:235>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:235>
 		int32_t L_96 = V_14;
 		V_14 = ((int32_t)il2cpp_codegen_subtract(L_96, 1));
 	}
 
 IL_0229:
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:235>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:235>
 		int32_t L_97 = V_14;
 		if ((((int32_t)L_97) >= ((int32_t)0)))
 		{
@@ -1208,12 +1208,12 @@ IL_0229:
 		}
 	}
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:250>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:250>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_98 = __this->____material;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_99 = ___0_source;
 		NullCheck(L_98);
 		Material_SetTexture_m06083C3F52EF02FFB1177901D9907314F280F9A5(L_98, _stringLiteralD62D0620DCC59E7C5F2161A049F9FF6D888D2E74, L_99, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:251>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:251>
 		bool L_100 = __this->____highQuality;
 		if (L_100)
 		{
@@ -1233,21 +1233,21 @@ IL_024a:
 IL_024b:
 	{
 		V_11 = G_B31_0;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:252>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:252>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_101 = V_12;
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_102 = ___1_destination;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_103 = __this->____material;
 		int32_t L_104 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(Graphics_t99CD970FFEA58171C70F54DF0C06D315BD452F2C_il2cpp_TypeInfo_var);
 		Graphics_Blit_m1875691D6AAA8CF8EDE8508538714CF895E36779(L_101, L_102, L_103, L_104, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:255>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:255>
 		V_16 = 0;
 		goto IL_02ba;
 	}
 
 IL_0262:
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:257>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:257>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_105 = __this->____blurBuffer1;
 		int32_t L_106 = V_16;
 		NullCheck(L_105);
@@ -1262,7 +1262,7 @@ IL_0262:
 		}
 	}
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:258>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:258>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_110 = __this->____blurBuffer1;
 		int32_t L_111 = V_16;
 		NullCheck(L_110);
@@ -1273,7 +1273,7 @@ IL_0262:
 
 IL_0281:
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:260>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:260>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_114 = __this->____blurBuffer2;
 		int32_t L_115 = V_16;
 		NullCheck(L_114);
@@ -1288,7 +1288,7 @@ IL_0281:
 		}
 	}
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:261>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:261>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_119 = __this->____blurBuffer2;
 		int32_t L_120 = V_16;
 		NullCheck(L_119);
@@ -1299,26 +1299,26 @@ IL_0281:
 
 IL_02a0:
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:263>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:263>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_123 = __this->____blurBuffer1;
 		int32_t L_124 = V_16;
 		NullCheck(L_123);
 		ArrayElementTypeCheck (L_123, NULL);
 		(L_123)->SetAt(static_cast<il2cpp_array_size_t>(L_124), (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27*)NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:264>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:264>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_125 = __this->____blurBuffer2;
 		int32_t L_126 = V_16;
 		NullCheck(L_125);
 		ArrayElementTypeCheck (L_125, NULL);
 		(L_125)->SetAt(static_cast<il2cpp_array_size_t>(L_126), (RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27*)NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:255>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:255>
 		int32_t L_127 = V_16;
 		V_16 = ((int32_t)il2cpp_codegen_add(L_127, 1));
 	}
 
 IL_02ba:
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:255>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:255>
 		int32_t L_128 = V_16;
 		if ((((int32_t)L_128) < ((int32_t)((int32_t)16))))
 		{
@@ -1326,14 +1326,14 @@ IL_02ba:
 		}
 	}
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:267>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:267>
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_129 = V_10;
 		RenderTexture_ReleaseTemporary_mEEF2C1990196FF06FDD0DC190928AD3A023EBDD2(L_129, NULL);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:268>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:268>
 		return;
 	}
 }
-// Method Definition Index: 95764
+// Method Definition Index: 95821
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom__ctor_mE7129E735B78AEBDDF8F13B35CD2B88A834BAB17 (Bloom_tA14A4ADA32420926093CB5242D06D17DA1A9BB1E* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1343,23 +1343,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Bloom__ctor_mE7129E735B78AEBDDF8F13B35CD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:58>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:58>
 		__this->____threshold = (0.800000012f);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:70>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:70>
 		__this->____softKnee = (0.5f);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:84>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:84>
 		__this->____radius = (2.5f);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:96>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:96>
 		__this->____intensity = (0.800000012f);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:108>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:108>
 		__this->____highQuality = (bool)1;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:114>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:114>
 		__this->____antiFlicker = (bool)1;
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:134>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:134>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_0 = (RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6*)(RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6*)SZArrayNew(RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		__this->____blurBuffer1 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____blurBuffer1), (void*)L_0);
-		//<source_info:D:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:135>
+		//<source_info:B:/AR-Projectile-Shooter/Assets/JMO Assets/Cartoon FX Remaster/Demo Assets/Kino Bloom/Bloom.cs:135>
 		RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6* L_1 = (RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6*)(RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6*)SZArrayNew(RenderTextureU5BU5D_t9C963C4B9AAD862BBE402147E82F7BEBF699F6A6_il2cpp_TypeInfo_var, (uint32_t)((int32_t)16));
 		__this->____blurBuffer2 = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____blurBuffer2), (void*)L_1);
@@ -1521,7 +1521,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 43694
+// Method Definition Index: 43693
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 Vector4_op_Implicit_m2ECA73F345A7AD84144133E9E51657204002B12D_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_v, const RuntimeMethod* method) 
 {
 	Vector4_t58B63D32F48C0DBF50DE2C60794C4676C80EDBE3 V_0;

@@ -1029,17 +1029,13 @@
           },
           {
             "name": "Rigidbody",
-            "scenes": [
-              "Assets/Scenes/AR_Engine_oil.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "SphereCollider",
-            "scenes": [
-              "Assets/Scenes/AR_Engine_oil.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },

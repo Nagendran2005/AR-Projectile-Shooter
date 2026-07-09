@@ -44898,6 +44898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4190889728727943285}
   - component: {fileID: 4113158248044338274}
+  - component: {fileID: 4507310407277632907}
   m_Layer: 6
   m_Name: 'PW1100GJ Engine 4 '
   m_TagString: Untagged
@@ -45648,6 +45649,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.880335, y: 5.1310177, z: 5.0759344}
   m_Center: {x: -2.9658918, y: -0.1165781, z: -0.019929409}
+--- !u!114 &4507310407277632907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4301208348220152042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e458671b5dfc74e4eadd826e7697df61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EngineExplosionManager
+  enginePartsList:
+  - partIdentifierName: Nacelle Head part
+    targetTransform: {fileID: 9167060425257816274}
+    explodedLocalPosition: {x: 4, y: 0.007234229, z: -0.00004270487}
+    explodedLocalRotation: {x: 0, y: 0, z: 0}
+    continuousRotationSpeed: 0
+  transitionDuration: 1.5
 --- !u!1 &4304287049855438153
 GameObject:
   m_ObjectHideFlags: 0
