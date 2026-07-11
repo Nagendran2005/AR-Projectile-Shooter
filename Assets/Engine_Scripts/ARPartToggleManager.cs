@@ -8,16 +8,41 @@ public class ARPartToggleManager : MonoBehaviour
     [Tooltip("Drag the GameObject with your new ARDirectPlacementDirector script here.")]
     [SerializeField] private ARDirectPlacementDirector placementDirector;
 
+    [Header("Direct Scene Target Configuration")]
+    [Tooltip("The existing live scene GameObject that is currently controlled by the Director.")]
+    [SerializeField] private GameObject existingGameObject;
+
     [Header("Alternative Swap Assets")]
-    [Tooltip("The detailed part prefabs that correspond to your original source prefabs list. Keep the list order identical!")]
-    [SerializeField] private GameObject[] alternativeDetailedPrefabs;
+    [Tooltip("The alternative detailed scene GameObject that should be unhidden.")]
+    [SerializeField] private GameObject detailedAlternativeObject;
+
+    [Tooltip("The specific Transform slot that dictates exactly where the detailed object should position and orient itself.")]
+    [SerializeField] private Transform detailedTargetTransformSlot;
 
     [Header("Animate Scaling Curves")]
     [SerializeField] private float transitionDuration = 0.25f;
 
-    private List<GameObject> activeSwappedInstances = new List<GameObject>();
-    private List<GameObject> capturedOriginalInstances = new List<GameObject>();
     private bool isShowingDetailedParts = false;
+    private Vector3 originalObjectTargetScale = Vector3.one;
+    private Vector3 detailedObjectTargetScale = Vector3.one;
+
+    private void Start()
+    {
+        // Cache the default design scales from the scene before any changes occur
+        if (existingGameObject != null)
+        {
+            originalObjectTargetScale = existingGameObject.transform.localScale;
+        }
+
+        if (detailedAlternativeObject != null)
+        {
+            // Use the scale from the target transform slot if assigned, otherwise fallback to its own scale
+            detailedObjectTargetScale = (detailedTargetTransformSlot != null) ? detailedTargetTransformSlot.localScale : detailedAlternativeObject.transform.localScale;
+
+            // Ensure the alternative breakdown object starts deactivated upon application launch
+            detailedAlternativeObject.SetActive(false);
+        }
+    }
 
     /// <summary>
     /// Call this function from your 'PARTS' Button OnClick() event handler loop.
@@ -25,45 +50,27 @@ public class ARPartToggleManager : MonoBehaviour
     public void ExecutePartSwapSwapSequence()
     {
         if (isShowingDetailedParts) return;
-
-        // Locate what was dynamically spawned onto the touch coordinates
-        CaptureSpawnedOriginalTargets();
-
-        if (capturedOriginalInstances.Count == 0)
+        if (existingGameObject == null || detailedAlternativeObject == null)
         {
-            Debug.LogWarning("[ARPartToggleManager] No active targets detected yet. Make sure you tap the floor to spawn the object first!");
+            Debug.LogWarning("[ARPartToggleManager] Please assign both the Existing and Detailed objects in the inspector!");
             return;
         }
 
         isShowingDetailedParts = true;
-        ClearSwappedRegistry();
 
-        for (int i = 0; i < capturedOriginalInstances.Count; i++)
+        // 1. Hide the primary existing gameobject cleanly
+        existingGameObject.SetActive(false);
+
+        // 2. If a custom transform slot is provided, match its position and rotation perfectly before revealing
+        if (detailedTargetTransformSlot != null)
         {
-            GameObject originalObj = capturedOriginalInstances[i];
-            if (originalObj == null) continue;
-
-            // Pick the matching detailed asset index safely
-            int prefabIndex = Mathf.Min(i, alternativeDetailedPrefabs.Length - 1);
-            if (alternativeDetailedPrefabs[prefabIndex] == null) continue;
-
-            // Hide the original spawned object seamlessly
-            originalObj.SetActive(false);
-
-            // Instantiate the alternative detailed piece at the exact touch position it currently sits
-            GameObject detailedInstance = Instantiate(
-                alternativeDetailedPrefabs[prefabIndex],
-                originalObj.transform.position,
-                originalObj.transform.rotation,
-                originalObj.transform.parent // Keep the exact same spatial hierarchy structure
-            );
-
-            // Maintain visual scale parity
-            detailedInstance.transform.localScale = originalObj.transform.localScale;
-            activeSwappedInstances.Add(detailedInstance);
-
-            StartCoroutine(ExecuteScalingTransition(detailedInstance.transform, Vector3.zero, originalObj.transform.localScale));
+            detailedAlternativeObject.transform.position = detailedTargetTransformSlot.position;
+            detailedAlternativeObject.transform.rotation = detailedTargetTransformSlot.rotation;
         }
+
+        // 3. Unhide the alternative structure and scale it up smoothly to its target scale
+        detailedAlternativeObject.SetActive(true);
+        StartCoroutine(ExecuteScalingTransition(detailedAlternativeObject.transform, Vector3.zero, detailedObjectTargetScale));
     }
 
     /// <summary>
@@ -72,70 +79,16 @@ public class ARPartToggleManager : MonoBehaviour
     public void ExecuteReverseReversionSequence()
     {
         if (!isShowingDetailedParts) return;
+        if (existingGameObject == null || detailedAlternativeObject == null) return;
 
         isShowingDetailedParts = false;
 
-        // Restore visibility back to all original spawned elements
-        for (int i = 0; i < capturedOriginalInstances.Count; i++)
-        {
-            if (capturedOriginalInstances[i] != null)
-            {
-                capturedOriginalInstances[i].SetActive(true);
-                Vector3 targetScale = capturedOriginalInstances[i].transform.localScale;
-                StartCoroutine(ExecuteScalingTransition(capturedOriginalInstances[i].transform, Vector3.zero, targetScale));
-            }
-        }
+        // 1. Hide the alternative target asset group framework cleanly
+        detailedAlternativeObject.SetActive(false);
 
-        ClearSwappedRegistry();
-    }
-
-    private void CaptureSpawnedOriginalTargets()
-    {
-        capturedOriginalInstances.Clear();
-
-        if (placementDirector == null)
-        {
-            placementDirector = Object.FindFirstObjectByType<ARDirectPlacementDirector>();
-
-            if (placementDirector == null)
-            {
-                Debug.LogError("[ARPartToggleManager] ARDirectPlacementDirector reference is missing! Please assign it in the inspector.");
-                return;
-            }
-        }
-
-        // FIX: Search by Transform instead of Collider. This detects any object regardless of physics components.
-        Transform[] allTransforms = Object.FindObjectsByType<Transform>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-
-        foreach (Transform t in allTransforms)
-        {
-            GameObject go = t.gameObject;
-
-            // Check if the object is a clone spawned by the director
-            if (go.name.Contains("(Clone)") && !go.name.Contains("Bullet") && !go.name.Contains("Canvas"))
-            {
-                // Find the top-most root parent of this clone to prevent grabbing interior child pieces
-                Transform rootClone = t;
-                while (rootClone.parent != null && rootClone.parent.name.Contains("(Clone)"))
-                {
-                    rootClone = rootClone.parent;
-                }
-
-                if (!capturedOriginalInstances.Contains(rootClone.gameObject))
-                {
-                    capturedOriginalInstances.Add(rootClone.gameObject);
-                }
-            }
-        }
-    }
-
-    private void ClearSwappedRegistry()
-    {
-        foreach (GameObject obj in activeSwappedInstances)
-        {
-            if (obj != null) Destroy(obj);
-        }
-        activeSwappedInstances.Clear();
+        // 2. Bring back visibility to the primary baseline scene element structure seamlessly
+        existingGameObject.SetActive(true);
+        StartCoroutine(ExecuteScalingTransition(existingGameObject.transform, Vector3.zero, originalObjectTargetScale));
     }
 
     private IEnumerator ExecuteScalingTransition(Transform targetTransform, Vector3 fromScale, Vector3 toScale)
@@ -154,10 +107,5 @@ public class ARPartToggleManager : MonoBehaviour
         }
 
         if (targetTransform != null) targetTransform.localScale = toScale;
-    }
-
-    private void OnDestroy()
-    {
-        ClearSwappedRegistry();
     }
 }

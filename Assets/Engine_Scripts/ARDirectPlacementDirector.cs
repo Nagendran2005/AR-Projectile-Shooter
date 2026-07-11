@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.Events; // Required for UnityEvents
 using TMPro;
 
 public class ARDirectPlacementDirector : MonoBehaviour
@@ -18,13 +19,19 @@ public class ARDirectPlacementDirector : MonoBehaviour
     [TextArea]
     [SerializeField] private string localizedReadyMsg = "Touch the screen to start";
 
+    [Header("AR Events")]
+    [Tooltip("This event triggers the exact frame an AR surface/floor is first detected.")]
+    [SerializeField] private UnityEvent onSurfaceDetected;
+
     [Header("Startup Entity Visibility Filters")]
     [SerializeField] private GameObject[] initialHidingGroup;
     [SerializeField] private GameObject[] initialShowingGroup;
 
     [Header("Deployment Generation Configurations")]
-    [Tooltip("The prefabs you want to spawn directly on the floor where you tap.")]
+    [Tooltip("The live scene GameObjects you want to move and animate directly on the floor where you tap.")]
     [SerializeField] private GameObject[] sourcePrefabsList;
+    [Tooltip("The target custom axis scales (X, Y, Z) the GameObjects will open up into.")]
+    [SerializeField] private Vector3[] targetScalesList;
     [Tooltip("Keep this array empty or use it to hold the spawned objects dynamically at runtime.")]
     [SerializeField] private Transform[] generationAnchorPoints;
     [SerializeField] private ParticleSystem generationVFX;
@@ -37,14 +44,20 @@ public class ARDirectPlacementDirector : MonoBehaviour
     [SerializeField] private float growthTimelineSpan = 0.35f;
 
     private bool surfaceIsAnchored = false;
-    private bool operationIsRunning = false;
-    private int remainingLiveTargets = 0;
+    private bool UIHasToggled = false;
+    private int currentSpawnIndex = 0; // Tracks which element index to place next
 
     void Start()
     {
         if (trackingStatusAlert != null) trackingStatusAlert.text = localizedSearchMsg;
 
         foreach (GameObject entity in initialShowingGroup)
+        {
+            if (entity != null) entity.SetActive(false);
+        }
+
+        // Initially hide target scene objects until touch activation triggers
+        foreach (GameObject entity in sourcePrefabsList)
         {
             if (entity != null) entity.SetActive(false);
         }
@@ -56,7 +69,8 @@ public class ARDirectPlacementDirector : MonoBehaviour
 
         EvaluateSpatialSurfaces();
 
-        if (!surfaceIsAnchored || operationIsRunning) return;
+        // Block if surface isn't ready or if we have already deployed all objects in the list
+        if (!surfaceIsAnchored || currentSpawnIndex >= sourcePrefabsList.Length) return;
 
         // Listen for screen touch input
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
@@ -73,7 +87,7 @@ public class ARDirectPlacementDirector : MonoBehaviour
                     // Grab the precise hit placement orientation matrix
                     Pose planeHitPose = structuralRayHits[0].pose;
 
-                    // Trigger deployment exactly where your finger tapped the floor!
+                    // Trigger deployment exactly where your finger tapped the floor for the current index!
                     InitiateMainOperation(planeHitPose);
                 }
             }
@@ -91,86 +105,111 @@ public class ARDirectPlacementDirector : MonoBehaviour
         {
             surfaceIsAnchored = true;
             if (trackingStatusAlert != null) trackingStatusAlert.text = localizedReadyMsg;
+
+            // TRIGGER EVENT: Fire your custom inspector functions here!
+            if (onSurfaceDetected != null)
+            {
+                onSurfaceDetected.Invoke();
+            }
         }
     }
 
     private void InitiateMainOperation(Pose spawnPose)
     {
-        operationIsRunning = true;
-
-        foreach (GameObject entity in initialHidingGroup)
+        // Only trigger UI canvas visual swaps once on the very first tap
+        if (!UIHasToggled)
         {
-            if (entity != null) entity.SetActive(false);
+            UIHasToggled = true;
+
+            foreach (GameObject entity in initialHidingGroup)
+            {
+                if (entity != null) entity.SetActive(false);
+            }
+
+            foreach (GameObject entity in initialShowingGroup)
+            {
+                if (entity != null) entity.SetActive(true);
+            }
+
+            if (trackingStatusAlert != null)
+                if (trackingStatusAlert.gameObject != null)
+                    trackingStatusAlert.gameObject.SetActive(false);
         }
 
-        foreach (GameObject entity in initialShowingGroup)
-        {
-            if (entity != null) entity.SetActive(true);
-        }
+        // Deploy only the single object matching our current placement sequence index
+        DeploySingleTargetStructureAtPose(spawnPose, currentSpawnIndex);
 
-        // Deploy the structures directly at the calculated touch surface coordinates
-        DeployTargetStructuresAtPose(spawnPose);
+        // Increment index tracker so the next tap evaluates the next array slot item
+        currentSpawnIndex++;
 
         if (mainAudioEmitter != null && deploymentSFX != null)
             mainAudioEmitter.PlayOneShot(deploymentSFX);
-
-        if (trackingStatusAlert != null)
-            trackingStatusAlert.gameObject.SetActive(false);
     }
 
-    private void DeployTargetStructuresAtPose(Pose accurateTargetPose)
+    private void DeploySingleTargetStructureAtPose(Pose accurateTargetPose, int index)
     {
-        // Spawns based on the prefabs assigned in your source list
-        int totalToSpawn = sourcePrefabsList.Length;
-        remainingLiveTargets = totalToSpawn;
+        if (index >= sourcePrefabsList.Length || sourcePrefabsList[index] == null) return;
 
-        for (int i = 0; i < totalToSpawn; i++)
+        // Activate the specific scene object reference directly
+        GameObject instantiatedTarget = sourcePrefabsList[index];
+        instantiatedTarget.SetActive(true);
+
+        instantiatedTarget.transform.position = accurateTargetPose.position;
+        instantiatedTarget.transform.rotation = accurateTargetPose.rotation;
+        instantiatedTarget.transform.localScale = Vector3.zero;
+
+        // Fallback safety to scale cleanly to (1,1,1) if target scale array index mismatch 
+        Vector3 finalScaleTarget = Vector3.one;
+        if (targetScalesList != null && index < targetScalesList.Length)
         {
-            if (sourcePrefabsList[i] == null) continue;
+            finalScaleTarget = targetScalesList[index];
+        }
 
-            // Spawn directly at the touch screen intersection matrix position
-            GameObject instantiatedTarget = Instantiate(sourcePrefabsList[i], accurateTargetPose.position, accurateTargetPose.rotation);
-            instantiatedTarget.transform.localScale = Vector3.zero;
+        StartCoroutine(ExecuteDeploymentScalingAnimation(instantiatedTarget.transform, finalScaleTarget));
 
-            // Run your original smooth scaling entry sequence
-            StartCoroutine(ExecuteDeploymentScalingAnimation(instantiatedTarget.transform));
+        // We pass 'false' to keep the original world position intact during parenting!
+        if (generationAnchorPoints != null && index < generationAnchorPoints.Length && generationAnchorPoints[index] != null)
+        {
+            instantiatedTarget.transform.SetParent(generationAnchorPoints[index], false);
 
-            // If you have a scene anchor assigned manually, parent it so it stays organized
-            if (generationAnchorPoints != null && i < generationAnchorPoints.Length && generationAnchorPoints[i] != null)
-            {
-                instantiatedTarget.transform.SetParent(generationAnchorPoints[i]);
-            }
+            // Explicitly re-enforce the correct touch coordinates so parenting doesn't warp it
+            instantiatedTarget.transform.position = accurateTargetPose.position;
+            instantiatedTarget.transform.rotation = accurateTargetPose.rotation;
+        }
 
-            if (generationVFX != null)
-            {
-                ParticleSystem fxInstance = Instantiate(generationVFX, accurateTargetPose.position, Quaternion.identity);
-                fxInstance.Play();
-                Destroy(fxInstance.gameObject, 1f);
-            }
+        if (generationVFX != null)
+        {
+            ParticleSystem fxInstance = Instantiate(generationVFX, accurateTargetPose.position, Quaternion.identity);
+            fxInstance.Play();
+            Destroy(fxInstance.gameObject, 1f);
         }
     }
 
-    private IEnumerator ExecuteDeploymentScalingAnimation(Transform targetTransform)
+    private IEnumerator ExecuteDeploymentScalingAnimation(Transform targetTransform, Vector3 maxTargetScale)
     {
         float timer = 0f;
-        while (timer < growthTimelineSpan)
+        while (targetTransform != null && timer < growthTimelineSpan)
         {
             timer += Time.deltaTime;
             float progress = Mathf.Clamp01(timer / growthTimelineSpan);
             progress = Mathf.SmoothStep(0f, 1f, progress);
-            targetTransform.transform.localScale = Vector3.Lerp(Vector3.zero, Vector3.one, progress);
+            targetTransform.transform.localScale = Vector3.Lerp(Vector3.zero, maxTargetScale, progress);
             yield return null;
         }
 
         float settlingSpan = 0.12f;
         timer = 0f;
-        while (timer < settlingSpan)
+        while (targetTransform != null && timer < settlingSpan)
         {
             timer += Time.deltaTime;
             float progress = Mathf.Clamp01(timer / settlingSpan);
-            targetTransform.transform.localScale = Vector3.Lerp(Vector3.one * 1.1f, Vector3.one, progress);
+            targetTransform.transform.localScale = Vector3.Lerp(maxTargetScale * 1.1f, maxTargetScale, progress);
             yield return null;
         }
-        targetTransform.transform.localScale = Vector3.one;
+
+        if (targetTransform != null)
+        {
+            targetTransform.transform.localScale = maxTargetScale;
+        }
     }
 }
